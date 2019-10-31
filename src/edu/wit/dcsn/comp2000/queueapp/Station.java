@@ -107,31 +107,19 @@ public final class Station
 	
 	// TODO complete this
 	
-	public  ArrayList<Passenger> boardTrain(int cap, ArrayList<Passenger> passengers, Location loc) {
+	public ArrayList<Passenger> embarkTrain(Train train){
 		
-		while(passengers.size() <= cap && !platforms.get(loc.getDirection()).isEmpty()) {
-			
-			passengers.add(platforms.get(loc.getDirection()).poll());
-			
-		}
+		ArrayList<Passenger> newPass = new ArrayList<Passenger>();
 		
-		return passengers;
+		Direction direction = train.getLocation().getDirection();
 		
-	}
-	
-	public ArrayList<Passenger> disembarkTrain(ArrayList<Passenger> passengers) {
+//		while(!platforms.isEmpty()&& newPass.size() < ) {
+//			
+//			platforms.get(direction).poll();
+//			
+//		}
 		
-		for(int x = 0; x<= passengers.size(); x++) {
-			
-			if(passengers.get(x).getFrom().equals(getLocation())) {
-				
-				passengers.remove(x);
-				
-			}
-			
-		}
-		
-		return passengers;
+		return newPass;
 		
 	}
 	
