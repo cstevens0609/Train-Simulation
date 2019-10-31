@@ -119,7 +119,28 @@ public final class Train
 	
 	
 	
-	// TODO complete this
+	public void boardTrain(ArrayList<Passenger> newPassengers)
+	{
+		for(int i = 0;  i <= getCapacity(); i++) {
+			passengers.add(newPassengers.get(i));
+			newPassengers.remove(i);
+			
+		}
+	}
+	
+	public ArrayList<Passenger> disembarkTrain()
+	{
+		ArrayList< Passenger > leavingPassengers = new ArrayList<>() ;
+		
+		for(int i = 0;  i <= getCapacity(); i++) 
+		{
+			if (passengers.get(i).getTo() == getLocation()) {
+			leavingPassengers.add(passengers.get(i));
+			passengers.remove(i);
+			}
+		}
+		return leavingPassengers;
+	}
 	
 	
 	
