@@ -21,6 +21,7 @@
 
 package edu.wit.dcsn.comp2000.queueapp;
 
+import java.io.FileNotFoundException;
 
 /**
  * @author Your Name
@@ -29,13 +30,37 @@ package edu.wit.dcsn.comp2000.queueapp;
 public class TrainSimulation
 	{
 
+	private static Logger log = new Logger();
+	
 	/**
 	 * @param args -unused-
+	 * @throws FileNotFoundException 
 	 */
-	public static void main( String[] args )
-		{
-		// TODO Auto-generated method stub
+	public static void main( String[] args ) throws FileNotFoundException{
+        
+		log.create();
+        //log.write(Train.toString());
 
-		}
+        Configuration    theConfiguration =    new Configuration() ;
+
+        int duration = theConfiguration.getTicks();
+        int seed = theConfiguration.getSeed();
+
+
+//        for(int tick = 0; tick < duration;  tick++) 
+//        {
+//            if(trian is at station) {
+//                train.disembark
+//                train.board
+//
+//            } 
+//            else {
+//                move train
+//            }
+//            tick++;
+//            generate passenger
+//        }
 
 	}
+	}
+

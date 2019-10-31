@@ -55,7 +55,7 @@ public final class Logger
 	/**
 	 * prevent instantiation
 	 */
-    private Logger()
+    Logger()
         {
         }
 
