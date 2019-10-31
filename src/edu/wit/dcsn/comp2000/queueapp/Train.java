@@ -134,7 +134,7 @@ public final class Train
 		
 		for(int i = 0;  i <= getCapacity(); i++) 
 		{
-			if (passengers.get(i).getTo() == getLocation()) {
+			if (passengers.get(i).getTo().equals(getLocation())) {
 			leavingPassengers.add(passengers.get(i));
 			passengers.remove(i);
 			}
@@ -142,7 +142,11 @@ public final class Train
 		return leavingPassengers;
 	}
 	
-	
+	public int numOfPassengers() {
+		
+		return passengers.size();
+		
+	}
 	
 	/**
 	 * Unit test driver

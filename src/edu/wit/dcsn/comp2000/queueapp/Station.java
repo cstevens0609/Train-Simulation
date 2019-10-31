@@ -22,6 +22,7 @@
 package edu.wit.dcsn.comp2000.queueapp;
 
 import java.io.FileNotFoundException ;
+import java.util.ArrayList;
 import java.util.Arrays ;
 import java.util.HashMap ;
 import java.util.LinkedList ;
@@ -106,7 +107,27 @@ public final class Station
 	
 	// TODO complete this
 	
+	public ArrayList<Passenger> embarkTrain(Train train){
+		
+		ArrayList<Passenger> newPass = new ArrayList<Passenger>();
+		
+		Direction direction = train.getLocation().getDirection();
+		
+		while(!platforms.isEmpty()&& newPass.size()+train.numOfPassengers() < train.getCapacity()) {
+			
+			newPass.add(platforms.get(direction).poll());
+			
+		}
+		
+		return newPass;
+		
+	}
 	
+	public void disembarkTrain(Train train) {
+		
+		train.disembarkTrain();
+		
+	}
 	
 	/**
 	 * Unit test driver
