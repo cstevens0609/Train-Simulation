@@ -190,7 +190,8 @@ public final class TrainRoute
     	}
 	
 	//Reverses the direction of the route
-	public Direction reverseDirecetion(Direction initialDirection) {
+	public Direction reverseDirection(Direction initialDirection) 
+	{
 		Direction reverse = Direction.NOT_APPLICABLE ; 
 		if(initialDirection == Direction.INBOUND) {
 			reverse = Direction.OUTBOUND ;
@@ -205,15 +206,6 @@ public final class TrainRoute
 		return reverse ;
 	}
 	
-	//Returns all stations in array list
-	public ArrayList<Station> getStations() {
-		return stations ;
-	}
-	
-	//Returns all trains in array list
-	public ArrayList<Train> getTrains() {
-		return trains ;
-	}
 	
 	
 	

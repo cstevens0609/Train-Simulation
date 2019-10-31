@@ -23,8 +23,12 @@ package edu.wit.dcsn.comp2000.queueapp;
 
 import java.io.FileNotFoundException;
 
+import edu.wit.dcsn.comp2000.queueapp.Configuration.PairedLimit;
+import edu.wit.dcsn.comp2000.queueapp.Configuration.RouteSpec;
+import edu.wit.dcsn.comp2000.queueapp.Configuration.TrainSpec;
+
 /**
- * @author Your Name
+ * @author Connor Stevens, Eli Dunker-Bendigo, Quinn Montgomery
  * @version 1.0.0
  */
 public class TrainSimulation
@@ -32,6 +36,8 @@ public class TrainSimulation
 
 	private static Logger log = new Logger();
 	
+    
+   // private static TrainRoute route = new TrainRoute(specification) ;
 	/**
 	 * @param args -unused-
 	 * @throws FileNotFoundException 
@@ -41,26 +47,38 @@ public class TrainSimulation
 		log.create();
         //log.write(Train.toString());
 
-        Configuration    theConfiguration =    new Configuration() ;
+		Configuration    theConfiguration =    new Configuration() ;
 
-        int duration = theConfiguration.getTicks();
-        int seed = theConfiguration.getSeed();
+	    int ticks = theConfiguration.getTicks();
+	    int seed = theConfiguration.getSeed();
+	    RouteSpec specification = theConfiguration.getRoute() ;
+	    int[] stations = theConfiguration.getStations() ;
+	    PairedLimit[] passengers = theConfiguration.getPassengers() ;
+	    TrainSpec[] trains = theConfiguration.getTrains() ;
+        
+        //generate 50 original passengers
+        
+        //run simulate()
+        
+        System.out.println(theConfiguration.toString()) ;
+	}
+	
+	
+	public void simulate(int duration, Direction trainDirection, Station currentStation) {
+        
+		for(int tick = 0; tick < duration;  tick++) 
+        {
+            
 
-
-//        for(int tick = 0; tick < duration;  tick++) 
-//        {
-//            if(trian is at station) {
-//                train.disembark
-//                train.board
-//
-//            } 
-//            else {
-//                move train
-//            }
-//            tick++;
-//            generate passenger
-//        }
+            //if(currentStation.getLocation() == highest || currentStation.getLocation() == lowest) {
+            	//route.reverseDirection(trainDirection) ; 
+            //}
+            tick++;
+            //generate passenger
+        }
 
 	}
+	
+	
 	}
 
