@@ -76,6 +76,9 @@ public final class TrainRoute
     	style =							routeSpecification.style ;
     	length =						routeSpecification.length ;
     	
+    	stations = 						new ArrayList<>() ;
+    	trains = 						new ArrayList<>() ;
+    	
     	}	// end 1-arg constructor
 	
 	
@@ -186,7 +189,23 @@ public final class TrainRoute
     	return calculatedDirection ;
     	}
 	
+	//Reverses the direction of the route
+	public Direction reverseDirecetion(Direction initialDirection) {
+		Direction reverse = Direction.NOT_APPLICABLE ; 
+		if(initialDirection == Direction.INBOUND) {
+			reverse = Direction.OUTBOUND ;
+		}
+		else if(initialDirection == Direction.OUTBOUND) {
+			reverse = Direction.INBOUND ;
+		}
+		else {
+			reverse = Direction.STATIONARY ;
+		}
+		
+		return reverse ;
+	}
 	
+	//public
 	
 	// TODO complete this
 	
