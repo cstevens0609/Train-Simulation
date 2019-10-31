@@ -205,9 +205,16 @@ public final class TrainRoute
 		return reverse ;
 	}
 	
-	//public
+	//Returns all stations in array list
+	public ArrayList<Station> getStations() {
+		return stations ;
+	}
 	
-	// TODO complete this
+	//Returns all trains in array list
+	public ArrayList<Train> getTrains() {
+		return trains ;
+	}
+	
 	
 	
 	
