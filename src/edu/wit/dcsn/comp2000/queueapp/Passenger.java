@@ -35,6 +35,9 @@ import edu.wit.dcsn.comp2000.queueapp.Configuration.PairedLimit ;	// for testing
  * @author	David M Rosenberg
  * @version	1.0.0	initial version
  * @version	1.0.1	minor fixes (don't affect behaviors)
+ * 
+ * @author Eli Dunker-Bendigo
+ * @version 1.0.0
  */
 public final class Passenger
 	{

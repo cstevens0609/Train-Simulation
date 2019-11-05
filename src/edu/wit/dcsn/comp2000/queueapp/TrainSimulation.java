@@ -73,7 +73,6 @@ public class TrainSimulation
             //if(currentStation.getLocation() == highest || currentStation.getLocation() == lowest) {
             	//route.reverseDirection(trainDirection) ; 
             //}
-            tick++;
             //generate passenger
         }
 

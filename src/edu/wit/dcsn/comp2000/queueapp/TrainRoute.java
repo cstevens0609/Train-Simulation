@@ -48,6 +48,9 @@ import edu.wit.dcsn.comp2000.queueapp.Configuration.RouteSpec ;
  * 
  * @author David M Rosenberg
  * @version 1.0.0	base version
+ * 
+ * @author Connor Sevens
+ * @version 1.0.0
  */
 public final class TrainRoute
 	{

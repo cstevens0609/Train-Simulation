@@ -46,6 +46,9 @@ import edu.wit.dcsn.comp2000.queueapp.Configuration.TrainSpec ;
  * 
  * @author David M Rosenberg
  * @version 1.0.0	base version
+ * 
+ * @author Eli Dunker-Bendigo
+ * @version 1.0.0
  */
 public final class Train
 	{
@@ -122,6 +125,7 @@ public final class Train
 	public void boardTrain(ArrayList<Passenger> newPassengers)
 	{
 		for(int i = 0;  i <= getCapacity(); i++) {
+			
 			passengers.add(newPassengers.get(i));
 			newPassengers.remove(i);
 			
@@ -135,8 +139,10 @@ public final class Train
 		for(int i = 0;  i <= getCapacity(); i++) 
 		{
 			if (passengers.get(i).getTo().equals(getLocation())) {
+				
 			leavingPassengers.add(passengers.get(i));
 			passengers.remove(i);
+			
 			}
 		}
 		return leavingPassengers;

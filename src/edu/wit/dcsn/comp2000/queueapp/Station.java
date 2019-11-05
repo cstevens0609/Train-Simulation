@@ -40,6 +40,10 @@ import java.util.Queue ;
  * 
  * @author David M Rosenberg
  * @version 1.0.0	base version
+ * 
+ * @author Quinn Montgomery
+ * @version 1.0.0
+ * 
  */
 public final class Station
 	{
